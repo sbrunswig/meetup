@@ -24,7 +24,8 @@ export async function getStaticPaths() {
   client.close();
 
   return {
-    fallback: false,
+    // tell nextjs paths might not be exhuastive
+    fallback: "blocking",
     paths: meetups.map((meetup) => ({ params: { meetupId: meetup._id.toString() } })),
   };
 }

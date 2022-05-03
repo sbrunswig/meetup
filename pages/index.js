@@ -36,7 +36,7 @@ export async function getStaticProps() {
       })),
     },
     // rebuilds data every 10 sec
-    revalidate: 10,
+    revalidate: 1,
   };
 }
 
